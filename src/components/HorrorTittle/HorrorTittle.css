@@ -1,0 +1,49 @@
+.horror-tittle {
+  font-family: 'tituloFont', cursive, serif;
+  color: #ff2b2b;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 50px;
+  text-shadow:
+    0 0 10px rgba(255,0,0,.6),
+    0 0 20px rgba(255,0,0,.3);
+}
+
+.horror-tittle h1 {
+    font-size: clamp(32px, 3vw, 48px);
+    font-weight: 900;
+    color: #cc0000;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    text-shadow:0 0 8px #ff000099,
+    0 0 30px #88000066,
+    0 0 60px #44000033,
+    4px 4px 0px #1a0000,
+    8px 8px 0px #0f0000;
+    animation: flicker 4s infinite;
+    animation: titleLoop 7s ease-in-out infinite;
+    transform-origin: top left;
+    margin: 0;
+    display: inline-block;
+}
+
+.horror-tittle .subtitle {
+    color: #5a0000;
+    font-size: 14px;
+    letter-spacing: 6px;
+    margin-top: 16px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+
+  .horror-tittle h1 {
+    letter-spacing: 2px;
+  }
+
+  .horror-tittle .subtitle {
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+}

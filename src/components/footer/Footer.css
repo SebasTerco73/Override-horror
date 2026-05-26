@@ -1,0 +1,42 @@
+.horror-footer {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 10px 20px 20px;
+  margin-top: 60px;
+  border-top: 1px solid rgba(120, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.horror-footer p {
+  color: #be0606;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.horror-footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin: 16px 0;
+}
+
+.horror-footer ul li {
+  color: #be0606;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.horror-footer ul li::before {
+  content: '🩸 ';
+  font-size: 18px;
+}
+
+.horror-footer .footer-sub {
+  color: #be0606;
+  font-size: 18px;
+  margin-top: 15px;
+}

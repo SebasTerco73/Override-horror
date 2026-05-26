@@ -1,0 +1,99 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'tituloFont';
+  src: url('./fonts/blood-font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'textoFont';
+  src: url('./fonts/text-font.ttf') format('truetype');
+  }
+
+.main-content {
+  margin-left: 160px;
+  padding: 0 20px;
+  animation: fadeIn .4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+  background: #080305;
+  background-image: url('./assets/img/bg.avif');
+  background-size: cover;
+  background-attachment: fixed; 
+  color: #fff;
+  font-family: 'textoFont', Georgia, serif;
+  overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes flicker {
+  0%   { opacity: 1; }
+  45%  { opacity: 1; }
+  50%  { opacity: 0.15; }
+  55%  { opacity: 0.9; }
+  57%  { opacity: 0.4; }
+  62%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes titleLoop {
+  /* --- fase 1: quieto --- */
+  0%   { opacity: 1;    transform: rotate(0deg) translateY(0); }
+
+  /* --- fase 2: parpadeo --- */
+  5%  { opacity: 1;    transform: rotate(0deg) translateY(0); }
+  13%  { opacity: 0.15; transform: rotate(0deg) translateY(0); }
+  15%  { opacity: 0.9;  transform: rotate(0deg) translateY(0); }
+  17%  { opacity: 0.3;  transform: rotate(0deg) translateY(0); }
+  20%  { opacity: 1;    transform: rotate(0deg) translateY(0); }
+  33%  { opacity: 0.15; transform: rotate(0deg) translateY(0); }
+  36%  { opacity: 0.9;  transform: rotate(0deg) translateY(0); }
+  39%  { opacity: 0.3;  transform: rotate(0deg) translateY(0); }
+  42%  { opacity: 1;  transform: rotate(0deg) translateY(0); }
+  48%  { opacity: 0.15; transform: rotate(0deg) translateY(0); }
+  52%  { opacity: 0.9;  transform: rotate(0deg) translateY(0); }
+
+  /* --- fase 4: se desprende y cuelga --- */
+  62%  { opacity: 1;    transform: rotate(75deg) translateY(10px); }
+
+  /* --- fase 5: cae --- */
+  80%  { opacity: 0;    transform: rotate(15deg) translateY(120vh); }
+
+  /* --- fase 6: invisible, vuelve arriba sin animación --- */
+  85%  { opacity: 0;    transform: rotate(0deg) translateY(0); }
+
+  /* --- fase 7: reaparece --- */
+
+  90% { opacity: 1;    transform: rotate(0deg) translateY(0); }
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 0 12px;
+    padding-bottom: 20px;
+  }
+}

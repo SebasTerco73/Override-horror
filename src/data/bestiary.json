@@ -1,0 +1,22 @@
+[
+  { "id": 1,  "nombre": "Valdrak",       "tipo": "Vampiro",   "peligro": 9,  "habilidades": ["Hipnosis", "Vuelo", "Regeneración"],           "descripcion": "Conde de las sombras, lleva siglos drenando aldeas enteras." },
+  { "id": 2,  "nombre": "Morrigan",      "tipo": "Bruja",     "peligro": 7,  "habilidades": ["Maldiciones", "Pociones", "Visión"],            "descripcion": "Sus hechizos doblan la realidad. Nunca negocia sin cobrar un precio." },
+  { "id": 3,  "nombre": "Kethral",       "tipo": "Demonio",   "peligro": 10, "habilidades": ["Fuego infernal", "Posesión", "Teletransporte"], "descripcion": "Señor del séptimo infierno. Su sola presencia corrompe la tierra." },
+  { "id": 4,  "nombre": "Sombra Hueca",  "tipo": "Espectro",  "peligro": 6,  "habilidades": ["Invisibilidad", "Drenaje vital", "Miedo"],      "descripcion": "No tiene forma física. Habita los espejos y los sueños." },
+  { "id": 5,  "nombre": "Gorrath",       "tipo": "Bestia",    "peligro": 8,  "habilidades": ["Fuerza brutal", "Veneno", "Rastreo"],           "descripcion": "Mitad lobo, mitad pesadilla. Caza en noches sin luna." },
+  { "id": 6,  "nombre": "Lirien",        "tipo": "Bruja",     "peligro": 5,  "habilidades": ["Encantamiento", "Transformación", "Sigilo"],    "descripcion": "Joven aprendiz que ya superó a su maestra en crueldad." },
+  { "id": 7,  "nombre": "El Sin Nombre", "tipo": "Espectro",  "peligro": 9,  "habilidades": ["Corrupción mental", "Posesión", "Telepatía"],   "descripcion": "Nadie que lo nombró en voz alta sobrevivió para contarlo." },
+  { "id": 8,  "nombre": "Drákulen",      "tipo": "Vampiro",   "peligro": 8,  "habilidades": ["Metamorfosis", "Seducción", "Fuerza"],          "descripcion": "Se disfraza de noble. Ha gobernado tres reinos desde las sombras." },
+  { "id": 9,  "nombre": "Pyrath",        "tipo": "Demonio",   "peligro": 7,  "habilidades": ["Llamas", "Engaño", "Contrato"],                 "descripcion": "Hace tratos. Siempre cumple la letra, nunca el espíritu." },
+  { "id": 10, "nombre": "Hueso Vivo",    "tipo": "No Muerto", "peligro": 4,  "habilidades": ["Resistencia", "Plaga", "Regeneración"],         "descripcion": "Esqueleto antiguo animado por una maldición olvidada." },
+  { "id": 11, "nombre": "Vrakon",        "tipo": "Bestia",    "peligro": 9,  "habilidades": ["Vuelo", "Aliento ácido", "Armadura natural"],   "descripcion": "Dragón corrupto. Sus escamas ya no brillan, solo absorben luz." },
+  { "id": 12, "nombre": "Tessara",       "tipo": "Bruja",     "peligro": 8,  "habilidades": ["Necromancia", "Ilusiones", "Pacto demoníaco"],  "descripcion": "Revive a los muertos para usarlos como ejército personal." },
+  { "id": 13, "nombre": "Noctis",        "tipo": "Vampiro",   "peligro": 6,  "habilidades": ["Sigiloso", "Hipnosis", "Transformación"],       "descripcion": "Prefiere la manipulación a la violencia. Más peligroso por eso." },
+  { "id": 14, "nombre": "La Llorona",    "tipo": "Espectro",  "peligro": 7,  "habilidades": ["Llanto maldito", "Ahogamiento", "Atracción"],   "descripcion": "Su llanto atrae a los vivos hacia aguas profundas." },
+  { "id": 15, "nombre": "Skarn",         "tipo": "Demonio",   "peligro": 8,  "habilidades": ["Fuerza", "Resistencia mágica", "Grito"],        "descripcion": "Soldado del infierno. No piensa, solo destruye." },
+  { "id": 16, "nombre": "Podre",         "tipo": "No Muerto", "peligro": 3,  "habilidades": ["Plaga", "Números", "Infección"],                "descripcion": "Solo, inofensivo. En manada, arrasan ciudades en horas." },
+  { "id": 17, "nombre": "Merrek",        "tipo": "Bestia",    "peligro": 6,  "habilidades": ["Camuflaje", "Veneno paralizante", "Salto"],     "descripcion": "Araña del tamaño de un caballo. Teje trampas invisibles." },
+  { "id": 18, "nombre": "Sael",          "tipo": "Vampiro",   "peligro": 5,  "habilidades": ["Encanto", "Vuelo", "Vista nocturna"],           "descripcion": "Recién convertido. Aún no controla su sed. El más impredecible." },
+  { "id": 19, "nombre": "Ignara",        "tipo": "Demonio",   "peligro": 6,  "habilidades": ["Fuego", "Ilusión", "Seducción"],                "descripcion": "Succubus de las llamas. Se alimenta de obsesiones." },
+  { "id": 20, "nombre": "El Cosechador", "tipo": "No Muerto", "peligro": 10, "habilidades": ["Inmortalidad", "Guadaña maldita", "Vacío"],     "descripcion": "No mata. Borra. Las víctimas simplemente dejan de haber existido." }
+]

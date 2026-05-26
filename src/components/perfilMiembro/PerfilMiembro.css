@@ -1,0 +1,341 @@
+#perfil {
+  width: min(900px, 90%);
+  margin: 80px auto;
+  border-radius: 2%;
+  animation: entrada .4s ease;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 80px 40px;
+}
+
+@keyframes entrada {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- volver --- */
+.perfil-volver {
+  border: 1px solid rgba(255, 0, 0, .3);
+  color: #ff2b2b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+
+.perfil-volver:hover {
+  background: rgba(255, 0, 0, .1);
+  transform: translateX(-4px);
+}
+
+/* --- hero --- */
+.perfil-hero {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  margin-top: 40px;
+}
+
+.perfil-foto {
+  width: 220px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid rgba(255, 0, 0, .35);
+  flex-shrink: 0;
+  box-shadow: 0 0 40px rgba(150, 0, 0, .3);
+}
+
+.perfil-hero-info h2 {
+  font-size: 42px;
+  color: #ff2b2b;
+  margin: 0 0 6px;
+}
+
+.perfil-rol {
+  font-size: 18px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 16px;
+}
+
+.perfil-frase {
+  font-size: 22px;
+  font-style: italic;
+  color: #cc4444;
+  margin: 0 0 20px;
+  border-left: 3px solid rgba(255, 0, 0, .4);
+  padding-left: 16px;
+}
+
+.perfil-bio {
+  font-size: 20px;
+  color: #cfcfcf;
+  line-height: 1.8;
+  margin: 0 0 28px;
+  letter-spacing: 1px;
+}
+
+/* --- redes --- */
+.redes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.red-btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform .2s, box-shadow .2s, background .2s, color .2s;
+}
+
+.red-btn:hover { transform: scale(1.08); }
+
+.github {
+  background: rgba(255, 255, 255, .05);
+  border-color: rgba(255, 255, 255, .2);
+  color: #eee;
+}
+.github:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, .2);
+}
+
+.linkedin {
+  background: rgba(0, 119, 181, .1);
+  border-color: rgba(0, 119, 181, .4);
+  color: #4da8d8;
+}
+.linkedin:hover {
+  background: #0077b5;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 119, 181, .4);
+}
+
+.instagram {
+  background: rgba(225, 48, 108, .1);
+  border-color: rgba(225, 48, 108, .3);
+  color: #e1306c;
+}
+.instagram:hover {
+  background: #e1306c;
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(225, 48, 108, .4);
+}
+
+/* --- bloques --- */
+.perfil-bloque {
+  margin-bottom: 56px;
+}
+
+.perfil-titulo {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #ff2b2b;
+  margin: 0 0 24px;
+  border-bottom: 1px solid rgba(255, 0, 0, .2);
+  padding-bottom: 10px;
+}
+
+/* --- skills --- */
+.skills-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.skill-nombre {
+  width: 130px;
+  flex-shrink: 0;
+  font-size: 18px;
+  color: #cfcfcf;
+  letter-spacing: 1.5px;
+}
+
+.skill-bar {
+  flex: 1;
+  height: 8px;
+  background: rgba(255, 255, 255, .07);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: var(--nivel);
+  background: linear-gradient(90deg, #8b0000, #ff2b2b);
+  border-radius: 4px;
+  animation: fill-bar .9s ease forwards;
+}
+
+@keyframes fill-bar {
+  from { width: 0; }
+  to   { width: var(--nivel); }
+}
+
+.skill-num {
+  font-size: 16px;
+  color: #888;
+  width: 38px;
+  text-align: right;
+  letter-spacing: 1.5px;
+}
+
+/* --- tech stack --- */
+.tech-grid {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 24px;
+  border: 1px solid rgba(255, 0, 0, .15);
+  border-radius: 12px;
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+  cursor: default;
+  min-width: 80px;
+}
+
+.tech-item:hover {
+  border-color: rgba(255, 0, 0, .5);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(150, 0, 0, .3);
+}
+
+.tech-icon { font-size: 30px; }
+
+.tech-nombre {
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  color: #888;
+  text-align: center;
+}
+
+/* --- carrusel --- */
+.carrusel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.car-btn {
+  background: none;
+  border: 1px solid rgba(255, 0, 0, .3);
+  color: #ff2b2b;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: background .2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-btn:hover { background: rgba(255, 0, 0, .15); }
+
+.car-slide {
+  flex: 1;
+  background: rgba(255, 255, 255, .02);
+  border: 1px solid rgba(255, 0, 0, .15);
+  border-radius: 14px;
+  padding: 28px 32px;
+  min-height: 120px;
+}
+
+.car-slide h4 {
+  color: #ff2b2b;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+
+.car-slide p {
+  color: #aaa;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  margin: 0 0 20px;
+  line-height: 1.6;
+}
+
+.car-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.car-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, .2);
+  cursor: pointer;
+  transition: background .2s;
+}
+
+.car-dot.active { background: #ff2b2b; }
+
+/* --- navegación entre miembros --- */
+.perfil-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perfil-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.perfil-nav-btn {
+  border: 1px solid rgba(255, 0, 0, .3);
+  color: #ff2b2b;
+  background: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: background .2s, transform .2s;
+}
+
+.perfil-nav-btn:hover:not(:disabled) {
+  background: rgba(255, 0, 0, .1);
+}
+
+.perfil-nav-btn:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .perfil-hero { flex-direction: column; align-items: center; text-align: center; }
+  .redes { justify-content: center; }
+}

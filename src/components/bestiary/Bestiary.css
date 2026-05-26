@@ -1,0 +1,221 @@
+.bestiary {
+  width: min(1000px, 90%);
+  margin: 80px auto;
+  padding-bottom: 80px;
+}
+
+.bestiary-header {
+  margin-bottom: 40px;
+}
+
+.bestiary-titulo {
+  font-size: 48px;
+  color: #ff2b2b;
+  letter-spacing: 6px;
+  margin: 0 0 6px;
+}
+
+.bestiary-subtitulo {
+  color: #555;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* --- controles --- */
+.bestiary-controles {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.bestiary-buscador {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,0,0,.25);
+  color: #eee;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.bestiary-buscador:focus {
+  border-color: rgba(255,0,0,.6);
+}
+
+.bestiary-buscador::placeholder { color: #444; }
+
+.bestiary-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filtro-btn {
+  background: none;
+  border: 1px solid rgba(255,0,0,.2);
+  color: #888;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all .2s;
+}
+
+.filtro-btn:hover,
+.filtro-btn.activo {
+  background: rgba(255,0,0,.12);
+  border-color: #ff2b2b;
+  color: #ff2b2b;
+}
+
+.orden-btn {
+  background: none;
+  border: 1px solid rgba(255,0,0,.2);
+  color: #888;
+  padding: 8px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  align-self: flex-start;
+  transition: all .2s;
+}
+
+.orden-btn:hover {
+  border-color: #ff2b2b;
+  color: #ff2b2b;
+}
+
+.bestiary-vacio {
+  color: #555;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* --- grid --- */
+.bestiary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* --- flip card --- */
+.card-wrapper {
+  height: 280px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform .6s ease;
+}
+
+.card-wrapper.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-frente,
+.card-dorso {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: 1px solid rgba(255,0,0,.15);
+  border-radius: 14px;
+  padding: 24px;
+  background: rgba(10,0,0,.7);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-dorso {
+  transform: rotateY(180deg);
+  justify-content: center;
+  background: rgba(30,0,0,.85);
+  border-color: rgba(255,0,0,.3);
+}
+
+.card-peligro {
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  align-self: flex-end;
+}
+
+.nivel-bajo   { color: #f0c040; }
+.nivel-medio  { color: #ff8c00; }
+.nivel-alto   { color: #ff2b2b; }
+
+.card-nombre {
+  font-size: 20px;
+  color: #eee;
+  margin: 0;
+  letter-spacing: 1.5px;
+}
+
+.card-tipo {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.card-habilidades {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-habilidades li {
+  font-size: 14px;
+  color: #aaa;
+  letter-spacing: 1px;
+  padding-left: 14px;
+  position: relative;
+}
+
+.card-habilidades li::before {
+  content: '▸';
+  color: #ff2b2b;
+  position: absolute;
+  left: 0;
+}
+
+.card-hint {
+  font-size: 11px;
+  color: #333;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: auto;
+  align-self: flex-end;
+}
+
+.card-desc {
+  color: #bbb;
+  font-size: 15px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.card-peligro-grande {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-top: 16px;
+}
