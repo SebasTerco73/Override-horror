@@ -1,7 +1,6 @@
 .horror-movies {
   width: min(1000px, 90%);
-  margin: 80px auto;
-  padding-bottom: 80px;
+  margin: 80px auto 10px;
 }
 
 .hm-header {
