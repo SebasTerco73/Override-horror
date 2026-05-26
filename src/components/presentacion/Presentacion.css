@@ -1,6 +1,6 @@
 #nosotros {
     font-family: 'textoFont', Georgia, serif;
-    width: min(900px, 100%);  
+    width: min(900px, 90%);  
     margin: 50px auto;
     padding: clamp(18px, 4vw, 32px);
     background: rgba(10, 0, 0, 0.75);
