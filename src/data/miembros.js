@@ -77,7 +77,7 @@ export const perfiles = {
       { titulo: 'Necro DB', desc: 'Esquema de base de datos para sistema de usuarios.' },
       { titulo: 'Shadow Queue', desc: 'Sistema de colas con Redis para procesamiento async.' },
     ],
-    redes: { github: '#', linkedin: '#', instagram: '#' },
+    redes: { github: 'https://github.com/NeyelVila', linkedin: '#', instagram: '#' },
   },
   
   Sebas: {
