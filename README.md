@@ -53,6 +53,10 @@ Aplicación web interactiva estilo "fanpage", con información y recursos audiov
 * [x] Sección Bitácora de Proyecto: Analisis del proceso de evolución del proyecto
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c41a608d-59d4-4e1c-96ef-d3ec1dfbdac6" />
 
+* [x] Página responsive: Se adapta a diferentes pantallas
+<img width="387" height="719" alt="image" src="https://github.com/user-attachments/assets/0f9bc36d-0dba-4575-af42-10c087e79cc7" />
+
+
 ---
 
 ## Características principales
