@@ -165,6 +165,7 @@ Ver más en [`package.json`](https://github.com/SebasTerco73/Override-horror/blo
 Solo uso educativo.  
 Imágenes y recursos audiovisuales utilizados con fines didácticos.  
 Diseño, implementación y recursos adaptados y creados por el equipo Override-horror.
+
 API https://www.themoviedb.org/
 
 ---
