@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { Routes, Route, Navigate, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import MainLayout from "./components/MainLayout";
 import Presentacion from "./components/presentacion/Presentacion";
 import Equipo from "./components/equipo/Equipo";
@@ -77,7 +77,7 @@ function App() {
 
       <Routes location={displayLocation} key={displayLocation.pathname}>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Navigate to="/presentacion" replace />} />
+          <Route path="/" element={<Presentacion />} />
           <Route path="/presentacion" element={<Presentacion />} />
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/bestiario" element={<Bestiary />} />
