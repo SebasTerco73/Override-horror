@@ -29,6 +29,7 @@ Aplicación web interactiva estilo "fanpage", con información y recursos audiov
 - [Vistas principales](#vistas-principales)
 - [Tecnologías y dependencias](#tecnologías-y-dependencias)
 - [Personalización y estilos](#personalización-y-estilos)
+- [Uso de IA](#uso-de-ia)
 - [Licencia y créditos](#licencia-y-créditos)
 - [Equipo](#equipo)
 
@@ -161,6 +162,14 @@ Ver más en [`package.json`](https://github.com/SebasTerco73/Override-horror/blo
 - Adaptado para **móviles y escritorio**.
 - **Fuentes terroríficas** aplicadas a títulos y texto principal.
 - **BloodCanvas** y otros componentes visuales custom incluyen scripts JS/Canvas propios.
+
+---
+
+## Uso de IA
+
+- GitHub Copilot ayudó con sugerencias y autocompletado de código.
+- ChatGPT nos facilitó el JSON utilizado en la seccion bestiario.
+- Claude nos aporto nuevos aprendizajes, mayormente en la parte visual, como animaciones , y efectos.
 
 ---
 
