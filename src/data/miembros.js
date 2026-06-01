@@ -29,7 +29,7 @@ export const perfiles = {
       { titulo: 'Crypta UI', desc: 'Biblioteca de componentes dark mode.' },
       { titulo: 'Blood Shop', desc: 'E-commerce de temática Halloween.' },
     ],
-    redes: { github: '#', linkedin: '#', instagram: '#' },
+    redes: { github: 'https://github.com/HerreraMarcela', linkedin: '#', instagram: 'https://www.instagram.com/mar.jea1814' },
   },
 
   Ailu: {
