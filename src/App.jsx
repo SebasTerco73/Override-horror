@@ -7,6 +7,7 @@ import PerfilMiembro from "./components/perfilMiembro/PerfilMiembro";
 import Bestiary from "./components/bestiary/Bestiary";
 import HorrorMovies from "./components/horrorMovies/HorrorMovies";
 import Bitacora from "./components/bitacora/Bitacora";
+import Tree from "./components/tree/Tree";
 import ScrollToTop from "./components/ScrollToTop";
 import LoadingTransition from "./components/loadingTransition/LoadingTransition";
 import { useState, useEffect } from "react";
@@ -83,6 +84,7 @@ function App() {
           <Route path="/bestiario" element={<Bestiary />} />
           <Route path="/peliculas" element={<HorrorMovies />} />
           <Route path="/bitacora" element={<Bitacora />} /> 
+          <Route path="/arbol" element={<Tree />} />
         </Route>
         <Route path="/equipo/:id" element={<PerfilMiembro />} />
       </Routes>

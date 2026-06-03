@@ -14,7 +14,10 @@ function Sidebar({ onNavegar }) {
       if (!footer || !sidebar) return
       const footerRect = footer.getBoundingClientRect()
       const windowHeight = window.innerHeight
+      console.log('footerTop', footerRect.top)
+      console.log('windowHeight', windowHeight)
       if (footerRect.top < windowHeight) {
+        console.log('ENTRO AL IF')
         sidebar.style.bottom = `${windowHeight - footerRect.top}px`
       } else {
         sidebar.style.bottom = '0px'
@@ -36,6 +39,7 @@ function Sidebar({ onNavegar }) {
     { to: '/equipo',       icon: 'fa-solid fa-skull',   label: 'Demonios'     },
     { to: '/peliculas',     icon: 'fa-solid fa-film', label: 'Películas'    },
     { to: '/bitacora',     icon: 'fa-solid fa-book', label: 'Bitácora'    },
+    { to: '/arbol',         icon: 'fa-solid fa-tree', label: 'Árbol' },
   ]
 
   return (
