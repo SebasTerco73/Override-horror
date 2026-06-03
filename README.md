@@ -54,6 +54,10 @@ Aplicación web interactiva estilo "fanpage", con información y recursos audiov
 * [x] Sección Bitácora de Proyecto: Analisis del proceso de evolución del proyecto
 <img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c41a608d-59d4-4e1c-96ef-d3ec1dfbdac6" />
 
+* [x] Sección Árbol de Renderizado: Se detalla la estructura jerárquica de la aplicación
+<img width="564" height="762" alt="image" src="https://github.com/user-attachments/assets/cce0ec6a-24ae-42ce-919a-f444b836d2d5" />
+
+
 * [x] Página responsive: Se adapta a diferentes pantallas
 <img width="387" height="719" alt="image" src="https://github.com/user-attachments/assets/0f9bc36d-0dba-4575-af42-10c087e79cc7" />
 
@@ -104,7 +108,7 @@ Copia el archivo `.env example` a `.env` si necesitas definir variables personal
 ## Estructura de carpetas
 
 ```
-/
+/ La casita del horror
 ├── public/
 │   └── favicon.png
 ├── src/
@@ -120,6 +124,7 @@ Copia el archivo `.env example` a `.env` si necesitas definir variables personal
 |   |   ├── perfilMiembro (jsx y css)
 |   |   ├── presentación (jsx y css)
 |   |   ├── sidebar (jsx y css)
+|   |   ├── tree (jsx y css)
 |   |   ├── BloodCanvas.jsx
 |   |   ├── MainLayout.jsx
 |   |   └── ScrollToTop.jsx
