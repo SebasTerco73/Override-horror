@@ -29,7 +29,7 @@ export const perfiles = {
       { titulo: 'Crypta UI', desc: 'Biblioteca de componentes dark mode.' },
       { titulo: 'Blood Shop', desc: 'E-commerce de temática Halloween.' },
     ],
-    redes: { github: 'https://github.com/HerreraMarcela', linkedin: '#', instagram: 'https://www.instagram.com/mar.jea1814' },
+    redes: { github: '', linkedin: '#', instagram: '' },
   },
 
   Ailu: {
@@ -77,7 +77,7 @@ export const perfiles = {
       { titulo: 'Necro DB', desc: 'Esquema de base de datos para sistema de usuarios.' },
       { titulo: 'Shadow Queue', desc: 'Sistema de colas con Redis para procesamiento async.' },
     ],
-    redes: { github: 'https://github.com/NeyelVila', linkedin: '#', instagram: '#' },
+    redes: { github: '', linkedin: '#', instagram: '#' },
   },
   
   Sebas: {
@@ -101,6 +101,6 @@ export const perfiles = {
       { titulo: 'Vault Service', desc: 'Servicio de almacenamiento cifrado de datos.' },
       { titulo: 'Demon Monitor', desc: 'Sistema de monitoreo de servicios en producción.' },
     ],
-    redes: { github: 'https://github.com/SebasTerco73', linkedin: 'https://www.linkedin.com/in/sebaspuche73/', instagram: '#' },
+    redes: { github: '', linkedin: '', instagram: '' },
   },
 }
