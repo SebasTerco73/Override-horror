@@ -74,7 +74,7 @@ function PerfilMiembro() {
 
           <div className="redes">
             <a
-              href={m.redes.github}
+              href={'https://github.com'}
               className="red-btn github"
               target="_blank"
               rel="noreferrer"
@@ -83,7 +83,7 @@ function PerfilMiembro() {
             </a>
 
             <a
-              href={m.redes.linkedin}
+              href={'https://linkedin.com'}
               className="red-btn linkedin"
               target="_blank"
               rel="noreferrer"
@@ -92,7 +92,7 @@ function PerfilMiembro() {
             </a>
 
             <a
-              href={m.redes.instagram}
+              href={'https://instagram.com'}
               className="red-btn instagram"
               target="_blank"
               rel="noreferrer"
