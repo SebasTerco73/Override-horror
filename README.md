@@ -41,7 +41,7 @@ Aplicación web interactiva estilo "fanpage", con información y recursos audiov
 * [x] Panel Central de Presentación (Dashboard Home): Seccion principal con presentacion del grupo, seccion "demonios" con tarjeta de acceso rápido para cada integrante del equipo, con imagenes ambientadas en el mundo del terror. Dispone de animaciones y transiciones.
 <img width="965" height="268" alt="presentacion_team" src="https://github.com/user-attachments/assets/5fb14084-b074-486f-b6e9-dfe0b176f965" />
 
-* [x] Sección Individual por Integrante (Perfil Profesional): Incluye barra de progreso de habilidades, carrusel de 3 proyectos, tech stack con iconografia, y botones de redes sociales con hover
+* [x] Sección Individual por Integrante (Perfil Profesional): Incluye barra de progreso de habilidades, carrusel de 3 proyectos, tech stack con iconografia, y botones de redes sociales con hover (por temas de privacidad, no estaran los links a las redes sociales de los miembros del equipo)
  <img width="492" height="689" alt="image" src="https://github.com/user-attachments/assets/f24df725-deb1-4936-910a-338350ba0f22" />
 
 * [x] Explorador de Datos Locales (JSON): Archivo JSON con datos de 20 distintas especies del mundo del terror, con lógica de filtrado por tipo y buscador de texto.
@@ -110,8 +110,25 @@ Copia el archivo `.env example` a `.env` si necesitas definir variables personal
 ├── src/
 │   ├── assets/           # Imágenes, fondos
 │   ├── components/       # Componentes principales y vistas
-│   ├── data/             # Recursos de datos (JSON, datasets)
-│   ├── fonts/            # Fuentes personalizadas .ttf
+|   |   ├── bestiary (jsx y css)
+|   |   ├── bitacora (jsx y css)
+|   |   ├── equipo (jsx y css)
+|   |   ├── footer (jsx y css)
+|   |   ├── horrorMovies (jsx y css)
+|   |   ├── horrorTittle (jsx y css)
+|   |   ├── loadingTransition (jsx y css)
+|   |   ├── perfilMiembro (jsx y css)
+|   |   ├── presentación (jsx y css)
+|   |   ├── sidebar (jsx y css)
+|   |   ├── BloodCanvas.jsx
+|   |   ├── MainLayout.jsx
+|   |   └── ScrollToTop.jsx
+│   ├── data/             
+|   |   ├── bestiary.json 
+|   |   └── miembros.js
+│   ├── fonts/            
+|   |   ├── blood-font.ttf
+|   |   └── text-font.ttf
 │   ├── index.css         # Estilos globales
 │   ├── main.jsx          # Renderizado raíz de React
 │   └── App.jsx           # Layout y enrutamiento principal
@@ -120,6 +137,7 @@ Copia el archivo `.env example` a `.env` si necesitas definir variables personal
 ├── vite.config.js        # Configuración de Vite
 ├── .env example          # Ejemplo de variables de entorno
 ├── .gitignore
+├── README.md
 ```
 
 ---
