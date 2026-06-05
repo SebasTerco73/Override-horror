@@ -14,8 +14,9 @@ function HorrorMovies() {
   const [cargando, setCargando]   = useState(false)
   const [error, setError]         = useState(null)
   const [lightbox, setLightbox]   = useState(null)
+  const [zoomed, setZoomed]       = useState(false)
   const [busqueda, setBusqueda]   = useState('')
-  const [busquedaActiva, setBusquedaActiva] = useState('') // la que realmente se busca
+  const [busquedaActiva, setBusquedaActiva] = useState('')
 
   const fetchPeliculas = useCallback(async () => {
     setCargando(true)
@@ -34,7 +35,6 @@ function HorrorMovies() {
       if (!res.ok) throw new Error(`Error ${res.status}`)
       const data = await res.json()
 
-      // si hay búsqueda, filtramos por género horror
       const resultados = busquedaActiva.trim()
         ? data.results.filter(p => p.genre_ids.includes(HORROR_ID))
         : data.results
@@ -49,23 +49,23 @@ function HorrorMovies() {
   }, [pagina, busquedaActiva])
 
   useEffect(() => {
-setTimeout(() => fetchPeliculas(), 0)
+    setTimeout(() => fetchPeliculas(), 0)
   }, [fetchPeliculas])
 
   // ESC y flechas para lightbox
   useEffect(() => {
     if (lightbox === null) return
     function handleKey(e) {
-      if (e.key === 'Escape')     setLightbox(null)
-      if (e.key === 'ArrowLeft')  setLightbox(i => (i - 1 + peliculas.length) % peliculas.length)
-      if (e.key === 'ArrowRight') setLightbox(i => (i + 1) % peliculas.length)
+      if (e.key === 'Escape')     { setLightbox(null); setZoomed(false) }
+      if (e.key === 'ArrowLeft')  { setZoomed(false); setLightbox(i => (i - 1 + peliculas.length) % peliculas.length) }
+      if (e.key === 'ArrowRight') { setZoomed(false); setLightbox(i => (i + 1) % peliculas.length) }
     }
     window.addEventListener('keydown', handleKey)
     return () => window.removeEventListener('keydown', handleKey)
   }, [lightbox, peliculas.length])
 
   function handleBuscar() {
-    setPagina(1) // resetea a página 1 al buscar
+    setPagina(1)
     setBusquedaActiva(busqueda)
   }
 
@@ -156,12 +156,20 @@ setTimeout(() => fetchPeliculas(), 0)
 
       {/* LIGHTBOX */}
       {peliActiva && (
-        <div className="lb-overlay" onClick={() => setLightbox(null)}>
-          <button className="lb-cerrar" onClick={() => setLightbox(null)}>✕</button>
-          <button className="lb-nav lb-prev" onClick={e => { e.stopPropagation(); setLightbox(i => (i - 1 + peliculas.length) % peliculas.length) }}>‹</button>
+        <div className="lb-overlay" onClick={() => { setLightbox(null); setZoomed(false) }}>
+          <button className="lb-cerrar" onClick={() => { setLightbox(null); setZoomed(false) }}>✕</button>
+          <button
+            className="lb-nav lb-prev"
+            onClick={e => { e.stopPropagation(); setZoomed(false); setLightbox(i => (i - 1 + peliculas.length) % peliculas.length) }}
+          >‹</button>
           <div className="lb-contenido" onClick={e => e.stopPropagation()}>
             {peliActiva.poster_path
-              ? <img src={`${IMG_LG}${peliActiva.poster_path}`} alt={peliActiva.title} className="lb-imagen" />
+              ? <img
+                  src={`${IMG_LG}${peliActiva.poster_path}`}
+                  alt={peliActiva.title}
+                  className={`lb-imagen${zoomed ? ' lb-imagen--zoomed' : ''}`}
+                  onClick={e => { e.stopPropagation(); setZoomed(z => !z) }}
+                />
               : <div className="lb-sin-imagen">SIN IMAGEN</div>
             }
             <div className="lb-info">
@@ -172,7 +180,10 @@ setTimeout(() => fetchPeliculas(), 0)
               </div>
             </div>
           </div>
-          <button className="lb-nav lb-next" onClick={e => { e.stopPropagation(); setLightbox(i => (i + 1) % peliculas.length) }}>›</button>
+          <button
+            className="lb-nav lb-next"
+            onClick={e => { e.stopPropagation(); setZoomed(false); setLightbox(i => (i + 1) % peliculas.length) }}
+          >›</button>
         </div>
       )}
 

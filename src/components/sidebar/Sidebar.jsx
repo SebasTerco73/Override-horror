@@ -35,8 +35,8 @@ function Sidebar({ onNavegar }) {
 
   const items = [
     { to: '/presentacion', icon: 'fa-solid fa-users',   label: 'Presentación' },
-    { to: '/bestiario',    icon: 'fa-brands fa-wolf-pack-battalion',    label: 'Bestiario'    },
     { to: '/equipo',       icon: 'fa-solid fa-skull',   label: 'Demonios'     },
+    { to: '/bestiario',    icon: 'fa-brands fa-wolf-pack-battalion',    label: 'Bestiario'    },
     { to: '/peliculas',     icon: 'fa-solid fa-film', label: 'Películas'    },
     { to: '/bitacora',     icon: 'fa-solid fa-book', label: 'Bitácora'    },
     { to: '/arbol',         icon: 'fa-solid fa-tree', label: 'Árbol' },
