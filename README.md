@@ -48,7 +48,7 @@ Aplicación web interactiva estilo "fanpage", con información y recursos audiov
 <img width="961" height="500" alt="image" src="https://github.com/user-attachments/assets/0279a2a1-f5cd-4e00-bec8-1e7c74e9e2cd" />
 
 * [x] Módulo de Integración de API Externa: Consumo asíncronico mediante el uso de async/await de la API themoviedb, con el id 27 para filtrar solo las peliculas del genero terror. Incluye sistema de paginación con los botones siguiente y anterior, ademas de una busqueda por texto
-* [x] Galería de Imágenes Interactiva: Con funcionalidad de Lightbox, navegacion interna y cierre mediante la tecla escape
+* [x] Galería de Imágenes Interactiva: Con funcionalidad de Lightbox, navegacion interna, zoom y cierre mediante la tecla escape
 <img width="802" height="645" alt="Sin título" src="https://github.com/user-attachments/assets/17b5f63d-bbed-4b19-8d00-25983af77e7d" />
 
 * [x] Sección Bitácora de Proyecto: Analisis del proceso de evolución del proyecto
