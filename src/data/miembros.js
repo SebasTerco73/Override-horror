@@ -53,7 +53,7 @@ export const perfiles = {
       { titulo: 'Bug Tracker', desc: 'Sistema de seguimiento de errores en tiempo real.' },
       { titulo: 'QA Docs', desc: 'Documentación de casos de prueba para 3 proyectos.' },
     ],
-    redes: { github: '#', linkedin: '#', instagram: '#' },
+    redes: { github: '', linkedin: '', instagram: '' },
   },
 
   Ney: {
