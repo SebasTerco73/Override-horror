@@ -38,6 +38,7 @@ function Sidebar({ onNavegar }) {
     { to: '/equipo',       icon: 'fa-solid fa-skull',   label: 'Demonios'     },
     { to: '/bestiario',    icon: 'fa-brands fa-wolf-pack-battalion',    label: 'Bestiario'    },
     { to: '/peliculas',     icon: 'fa-solid fa-film', label: 'Películas'    },
+    { to: '/monsters',     icon: 'fa-solid fa-ghost', label: 'Monstruos'    },
     { to: '/bitacora',     icon: 'fa-solid fa-book', label: 'Bitácora'    },
     { to: '/arbol',         icon: 'fa-solid fa-tree', label: 'Árbol' },
   ]

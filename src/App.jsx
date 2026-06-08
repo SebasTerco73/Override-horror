@@ -6,6 +6,7 @@ import Equipo from "./components/equipo/Equipo";
 import PerfilMiembro from "./components/perfilMiembro/PerfilMiembro";
 import Bestiary from "./components/bestiary/Bestiary";
 import HorrorMovies from "./components/horrorMovies/HorrorMovies";
+import MonstersGallery from "./components/monstersGallery/MonstersGallery";
 import Bitacora from "./components/bitacora/Bitacora";
 import Tree from "./components/tree/Tree";
 import ScrollToTop from "./components/ScrollToTop";
@@ -83,6 +84,7 @@ function App() {
           <Route path="/equipo" element={<Equipo />} />
           <Route path="/bestiario" element={<Bestiary />} />
           <Route path="/peliculas" element={<HorrorMovies />} />
+          <Route path="/monsters" element={<MonstersGallery />} />
           <Route path="/bitacora" element={<Bitacora />} /> 
           <Route path="/arbol" element={<Tree />} />
         </Route>
