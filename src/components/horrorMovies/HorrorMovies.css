@@ -21,6 +21,12 @@
   margin: 0;
 }
 
+.control {
+  width: 25px;
+  height: 25px;
+  filter: invert(100%) sepia(100%) grayscale(100%) brightness(150%);
+}
+
 /* --- estados --- */
 .hm-error {
   text-align: center;

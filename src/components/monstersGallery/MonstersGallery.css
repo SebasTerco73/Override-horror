@@ -4,8 +4,14 @@
 }
 
 .gallery-header   { margin-bottom: 40px; }
-.gallery-titulo   { font-size: 48px; letter-spacing: 6px; margin: 0 0 6px; }
+.gallery-titulo   { font-size: 48px; letter-spacing: 6px; margin: 0 0 6px; color: #ff2b2b; }
 .gallery-subtitulo{ color: #555; letter-spacing: 2px; font-size: 14px; margin: 0; }
+
+.control {
+  width: 25px;
+  height: 25px;
+  filter: invert(100%) sepia(100%) grayscale(100%) brightness(150%);
+}
 
 .gallery-grid {
   display: grid;

@@ -1,5 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import './HorrorMovies.css'
+import next from '../../assets/img/manoright.png'
+import prev from '../../assets/img/manoleft.png'
 
 const API_KEY = import.meta.env.VITE_TMDB_KEY
 const BASE_URL = 'https://api.themoviedb.org/3'
@@ -161,7 +163,9 @@ function HorrorMovies() {
           <button
             className="lb-nav lb-prev"
             onClick={e => { e.stopPropagation(); setZoomed(false); setLightbox(i => (i - 1 + peliculas.length) % peliculas.length) }}
-          >‹</button>
+          >
+            <img class="control" src={prev} alt="Anterior" />
+          </button>
           <div className="lb-contenido" onClick={e => e.stopPropagation()}>
             {peliActiva.poster_path
               ? <img
@@ -183,7 +187,9 @@ function HorrorMovies() {
           <button
             className="lb-nav lb-next"
             onClick={e => { e.stopPropagation(); setZoomed(false); setLightbox(i => (i + 1) % peliculas.length) }}
-          >›</button>
+          >
+            <img class="control" src={next} alt="Siguiente" />
+          </button>
         </div>
       )}
 

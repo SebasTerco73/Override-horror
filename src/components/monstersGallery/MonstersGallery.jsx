@@ -21,6 +21,9 @@ import img18 from '../../assets/img/monster-guason.jpg'
 import img19 from '../../assets/img/monster-pinhead.jpeg'
 import img20 from '../../assets/img/monster-lecter.jpg'
 
+import next from '../../assets/img/manoright.png'
+import prev from '../../assets/img/manoleft.png'
+
 const IMAGENES = [
   { id: 1, src: img1, titulo: 'Darth Vader', categoria: 'Lord Sith' },
   { id: 2, src: img2, titulo: 'Nemesis', categoria: 'Experimento' },
@@ -95,7 +98,9 @@ function MonstersGallery() {
           <button
             className="lb-nav lb-prev"
             onClick={e => { e.stopPropagation(); setZoomed(false); setLightbox(i => (i - 1 + IMAGENES.length) % IMAGENES.length) }}
-          >‹</button>
+          >
+            <img class="control" src={prev} alt="Anterior" />
+          </button>
 
           <div className="lb-contenido" onClick={e => e.stopPropagation()}>
             <img
@@ -115,7 +120,9 @@ function MonstersGallery() {
           <button
             className="lb-nav lb-next"
             onClick={e => { e.stopPropagation(); setZoomed(false); setLightbox(i => (i + 1) % IMAGENES.length) }}
-          >›</button>
+          >
+            <img class="control" src={next} alt="Siguiente" />
+          </button>
 
         </div>
       )}

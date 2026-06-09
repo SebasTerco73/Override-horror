@@ -14,6 +14,9 @@
 .timeline {
   position: relative;
   padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .timeline::before {
@@ -26,24 +29,23 @@
   background: linear-gradient(to bottom, transparent, #ff2b2b 10%, #ff2b2b 90%, transparent);
 }
 
-/* --- evento --- */
-.evento {
+/* --- evento (details) --- */
+details.evento {
   position: relative;
   margin-bottom: 48px;
-  padding: 28px 32px;
-  background: rgba(10,0,0,.5);
-  border: 1px solid rgba(255,0,0,.12);
+  background: rgba(10, 0, 0, .5);
+  border: 1px solid rgba(255, 0, 0, .12);
   border-radius: 14px;
   transition: border-color .2s, box-shadow .2s;
 }
 
-.evento:hover {
-  border-color: rgba(255,0,0,.35);
-  box-shadow: 0 8px 30px rgba(150,0,0,.2);
+details.evento:hover {
+  border-color: rgba(255, 0, 0, .35);
+  box-shadow: 0 8px 30px rgba(150, 0, 0, .2);
 }
 
 /* punto en la línea */
-.evento::before {
+details.evento::before {
   content: '';
   position: absolute;
   left: -44px;
@@ -52,20 +54,64 @@
   height: 10px;
   border-radius: 50%;
   background: #ff2b2b;
-  box-shadow: 0 0 10px rgba(255,0,0,.6);
+  box-shadow: 0 0 10px rgba(255, 0, 0, .6);
 }
 
-.evento h3 {
+/* --- summary (título / header del acordeón) --- */
+details.evento > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 32px;
+  cursor: pointer;
   font-size: 20px;
   color: #ff2b2b;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin: 0 0 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(255,0,0,.12);
+  border-radius: 14px;
+  user-select: none;
+  transition: opacity .15s;
 }
 
-.evento p {
+details.evento > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.evento > summary:hover {
+  opacity: .85;
+}
+
+/* separador inferior del summary cuando está abierto */
+details.evento[open] > summary {
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 0, 0, .12);
+  border-radius: 14px 14px 0 0;
+}
+
+/* flecha */
+.chevron {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #ff2b2b;
+  flex-shrink: 0;
+  transition: transform .2s ease;
+}
+
+details.evento[open] .chevron {
+  transform: rotate(180deg);
+}
+
+/* --- cuerpo expandido --- */
+.evento-body {
+  padding: 12px 32px 28px;
+}
+
+.evento-body p {
   font-size: 16px;
   color: #aaa;
   letter-spacing: 1px;
@@ -73,9 +119,11 @@
   margin: 0 0 10px;
 }
 
-.evento p:last-child { margin: 0; }
+.evento-body p:last-child {
+  margin: 0;
+}
 
-.evento strong {
+.evento-body strong {
   color: #eee;
   letter-spacing: 1.5px;
 }
@@ -84,12 +132,27 @@
 .dificultad strong { color: #ff8c00; }
 .solucion strong { color: #4caf50; }
 
+/* --- responsive --- */
 @media (max-width: 600px) {
   .timeline { padding-left: 24px; }
 
-  .evento {
-    padding: 20px;
+  details.evento {
+    padding: 0;
   }
 
-  .evento::before { left: -28px; }
+  details.evento > summary {
+    padding: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+  }
+
+  details.evento[open] > summary {
+    padding-bottom: 16px;
+  }
+
+  .evento-body {
+    padding: 10px 20px 20px;
+  }
+
+  details.evento::before { left: -28px; }
 }
